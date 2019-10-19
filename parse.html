@@ -4,6 +4,12 @@
    <head>
      <meta charset="UTF-8">
      <title>title</title>
+     <style>
+       .sml{
+         width: 100px;
+         height: 100px;
+       }
+     </style>
    </head>
    <body>
     <input id='input' type='text' value="" placeholder="Insert City Name"/>
@@ -18,21 +24,21 @@
     <script>
         var obj = {};
         var goals={
-          score_sdg1: "<img src='/static/images/Goal01.png'>",
-          score_sdg2: "End Hunger and Increase Nutririon",
-          score_sdg3: "Healthy lives at all ages",
-          score_sdg4: "Inclusive and equitable education",
-          score_sdg5: "Achive gender equality",
-          score_sdg6: "Ensure availability and sustainability of water",
-          score_sdg7: "Ensure access to affordable and sustainable energy",
-          score_sdg8: "Promote sutained economic growth and decent work for all",
-          score_sdg9: "Build resilient infrastructure",
-          score_sdg10: "Reduce inequality withing and among countries",
-          score_sdg11: "Make cities inclusive safe and sustainable",
-          score_sdg12: "Ensure sustainable consumption and productive patterns",
-          score_sdg13: "Take urgent action to combat climate change and its impacts",
-          score_sdg15: "protect restore and promote sustanable use of ecosystems",
-          score_sdg16: "promote peacfull inclusive societies, ustice for all, accountablity at all levels"
+          score_sdg1: "<img class='sml' src='/static/images/Goal01.png'>",
+          score_sdg2: "<img class='sml' src='/static/images/Goal02.png'>",
+          score_sdg3: "<img class='sml' src='/static/images/Goal03.png'>",
+          score_sdg4: "<img class='sml' src='/static/images/Goal04.png'>",
+          score_sdg5: "<img class='sml' src='/static/images/Goal05.png'>",
+          score_sdg6: "<img class='sml' src='/static/images/Goal06.png'>",
+          score_sdg7: "<img class='sml' src='/static/images/Goal07.png'>",
+          score_sdg8: "<img class='sml' src='/static/images/Goal08.png'>",
+          score_sdg9: "<img class='sml' src='/static/images/Goal09.png'>",
+          score_sdg10: "<img class='sml' src='/static/images/Goal10.png'>",
+          score_sdg11: "<img class='sml' src='/static/images/Goal11.png'>",
+          score_sdg12: "<img class='sml' src='/static/images/Goal12.png'>",
+          score_sdg13: "<img class='sml' src='/static/images/Goal13.png'>",
+          score_sdg15: "<img class='sml' src='/static/images/Goal15.png'>",
+          score_sdg16: "<img class='sml' src='/static/images/Goal16.png'>"
         };
 function update(){
     console.log()
@@ -86,7 +92,7 @@ $(document).ready(function() {
 });
 
 function processData(allText) {
-    allTextParsed = allText.replace(/['"\\]+/g, '');
+  allTextParsed = allText.replace(/['"\\]+/g, '');
   var allTextLines = allTextParsed.split(/\r\n|\n/);
   //console.log(allTextLines);
   var titles = allTextLines[0].split(",");
