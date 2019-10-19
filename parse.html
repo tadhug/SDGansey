@@ -1,0 +1,57 @@
+
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <meta charset="UTF-8">
+     <title>title</title>
+   </head>
+   <body>
+    <input id='input' type='text' value="" placeholder="Insert City Name"/>
+    <input type='button' value='search' onclick="update();"/>
+    <div id='display'></div>
+
+
+        <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+    <script>
+        var obj = {};
+function update(){
+    console.log()
+    document.getElementById('display').innerHTML="<p>"+obj[document.getElementById('input').value]['score_sdgi']+"</p>";
+}
+$(document).ready(function() {
+  $.ajax({
+    type: "GET",
+    url: "2019USCitiesIndexResults.csv",
+    dataType: "text",
+    success: function(data) {
+        processData(data);
+    }
+  });
+});
+
+function processData(allText) {
+    allTextParsed = allText.replace(/['"\\]+/g, '');
+  var allTextLines = allTextParsed.split(/\r\n|\n/);
+  //console.log(allTextLines);
+  var titles = allTextLines[0].split(",");
+  console.log(titles);
+  for(var i=1; i<allTextLines.length; i++){
+    var line = allTextLines[i].split(",");
+    var cities = line[0].split("-");
+    for(var j=0;j<cities.length;j++){
+        obj[cities[j].replace(/["]+/g, '')]={};
+        for(var k=2; k<line.length;k++){
+            (obj[cities[j].replace(/["]+/g, '')])[titles[k-1]]=line[k];
+        }
+    }
+  }
+  console.log(obj);
+}
+    
+    </script>
+   </body>
+ </html>
+ 
