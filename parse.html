@@ -17,9 +17,62 @@
         crossorigin="anonymous"></script>
     <script>
         var obj = {};
+        var goals={
+          score_sdg1: "End poverty in all its forms everywhere",
+          score_sdg2: "End Hunger and Increase Nutririon",
+          score_sdg3: "Healthy lives at all ages",
+          score_sdg4: "Inclusive and equitable education",
+          score_sdg5: "Achive gender equality",
+          score_sdg6: "Ensure availability and sustainability of water",
+          score_sdg7: "Ensure access to affordable and sustainable energy",
+          score_sdg8: "Promote sutained economic growth and decent work for all",
+          score_sdg9: "Build resilient infrastructure",
+          score_sdg10: "Reduce inequality withing and among countries",
+          score_sdg11: "Make cities inclusive safe and sustainable",
+          score_sdg12: "Ensure sustainable consumption and productive patterns",
+          score_sdg13: "Take urgent action to combat climate change and its impacts",
+          score_sdg15: "protect restore and promote sustanable use of ecosystems",
+          score_sdg16: "promote peacfull inclusive societies, ustice for all, accountablity at all levels"
+        };
 function update(){
     console.log()
-    document.getElementById('display').innerHTML="<p>"+obj[document.getElementById('input').value]['score_sdgi']+"</p>";
+    var html = "<h1>Overall Score</h1><h2>"+obj[document.getElementById('input').value]['score_sdgi'];
+        if(obj[document.getElementById('input').value][str] > 90){
+          html+=" A";
+          document.body.style.background = 'green';
+        } 
+        else if(obj[document.getElementById('input').value]['score_sdgi'] >= 80){
+          html+=" B";
+          document.body.style.background = 'yellow';
+        } 
+        else if(obj[document.getElementById('input').value]['score_sdgi'] >= 70){
+          html+=" C";
+          document.body.style.background = 'orange';
+        } 
+        else if(obj[document.getElementById('input').value]['score_sdgi'] >= 60){
+          html+=" D";
+          document.body.style.background = 'red';
+        } else{
+          html+=" F";
+          document.body.style.background='black';
+          document.body.style.color='white';
+        }
+        html+="</h2>";
+    html+="<table><tr><th>Category</th><th>Percentage</th><th>Grade</th></tr>"
+    for(var i=1; i<=16; i++){
+      if(i==14)continue;
+        var str = "score_sdg"+i;
+        //html +="<p>"+goals[str]+": "+obj[document.getElementById('input').value][str]+"</p>";
+        html+="<tr><td>"+goals[str]+"</td><td>"+obj[document.getElementById('input').value][str]+"</td><td>";
+        if(obj[document.getElementById('input').value][str] > 90) html+="A";
+        else if(obj[document.getElementById('input').value][str] > 80) html+="B";
+        else if(obj[document.getElementById('input').value][str] > 70) html+="C";
+        else if(obj[document.getElementById('input').value][str] > 60) html+="D";
+        else html+="F";
+        html+="</td></tr>";
+    }
+    document.getElementById('display').innerHTML=html;
+   //document.getElementById('display').innerHTML="<p>"+obj[document.getElementById('input').value]['score_sdgi']+"</p>";
 }
 $(document).ready(function() {
   $.ajax({
