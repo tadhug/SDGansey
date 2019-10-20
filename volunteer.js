@@ -1,5 +1,5 @@
 function getVolunteer(clicked){
-    var sdg = clicked.sdg;
+    var sdg = clicked.getAttribute('sdg');
     var extraSearch={
         score_sdg1: " eliminate poverty",
         score_sdg2: " feed the needy",
@@ -18,5 +18,5 @@ function getVolunteer(clicked){
         score_sdg16: " legal justice"
       };
     var search = document.getElementById('input').value+" volunteering"+extraSearch[sdg];
-    window.open('google.com/search?='+encodeURIComponent(search));
+    window.open('https://www.google.com/search?='+encodeURIComponent(search));
 }
