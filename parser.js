@@ -19,7 +19,7 @@ var obj = {};
 
 function update(){
     document.getElementsByClassName("owl-carousel")[0].style.display="none";
-    var html = "<h1>Overall Score</h1><h2>"+obj[document.getElementById('input').value]['score_sdgi']+"<div ";
+    var html = "<h1>Overall Score</h1><h2>"+obj[document.getElementById('input').value.toLowerCase()]['score_sdgi']+"<div ";
     if(obj[document.getElementById('input').value][str] > 90){
         html+='id="Green"><h2>';
         html+=" A";
