@@ -1,20 +1,20 @@
 var obj = {};
         var goals={
-          score_sdg1: "<img class='sml' src='/images/Goal01.png'>",
-          score_sdg2: "<img class='sml' src='/images/Goal02.png'>",
-          score_sdg3: "<img class='sml' src='/images/Goal03.png'>",
-          score_sdg4: "<img class='sml' src='/images/Goal04.png'>",
-          score_sdg5: "<img class='sml' src='/images/Goal05.png'>",
-          score_sdg6: "<img class='sml' src='/images/Goal06.png'>",
-          score_sdg7: "<img class='sml' src='/images/Goal07.png'>",
-          score_sdg8: "<img class='sml' src='/images/Goal08.png'>",
-          score_sdg9: "<img class='sml' src='/images/Goal09.png'>",
-          score_sdg10: "<img class='sml' src='/images/Goal10.png'>",
-          score_sdg11: "<img class='sml' src='/images/Goal11.png'>",
-          score_sdg12: "<img class='sml' src='/static/images/Goal12.png'>",
-          score_sdg13: "<img class='sml' src='/static/images/Goal13.png'>",
-          score_sdg15: "<img class='sml' src='/static/images/Goal15.png'>",
-          score_sdg16: "<img class='sml' src='/static/images/Goal16.png'>"
+          score_sdg1: "<img class='sml' sdg='score_sdg1' src='/images/Goal01.png'>",
+          score_sdg2: "<img class='sml' sdg='score_sdg2' src='/images/Goal02.png'>",
+          score_sdg3: "<img class='sml' sdg='score_sdg3' src='/images/Goal03.png'>",
+          score_sdg4: "<img class='sml' sdg='score_sdg4' src='/images/Goal04.png'>",
+          score_sdg5: "<img class='sml' sdg='score_sdg5' src='/images/Goal05.png'>",
+          score_sdg6: "<img class='sml' sdg='score_sdg6' src='/images/Goal06.png'>",
+          score_sdg7: "<img class='sml' sdg='score_sdg7' src='/images/Goal07.png'>",
+          score_sdg8: "<img class='sml' sdg='score_sdg8' src='/images/Goal08.png'>",
+          score_sdg9: "<img class='sml' sdg='score_sdg9' src='/images/Goal09.png'>",
+          score_sdg10: "<img class='sml' sdg='score_sdg10' src='/images/Goal10.png'>",
+          score_sdg11: "<img class='sml' sdg='score_sdg11' src='/images/Goal11.png'>",
+          score_sdg12: "<img class='sml' sdg='score_sdg12' src='/static/images/Goal12.png'>",
+          score_sdg13: "<img class='sml' sdg='score_sdg13' src='/static/images/Goal13.png'>",
+          score_sdg15: "<img class='sml' sdg='score_sdg15' src='/static/images/Goal15.png'>",
+          score_sdg16: "<img class='sml' sdg='score_sdg16' src='/static/images/Goal16.png'>"
         };
 
 function update(){
@@ -62,9 +62,9 @@ function update(){
         //html +="<p>"+goals[str]+": "+obj[document.getElementById('input').value][str]+"</p>";
         html+="<tr><td>"+goals[str]+"</td><td>"+obj[document.getElementById('input').value][str]+"</td><td>";
         if(obj[document.getElementById('input').value][str] > 90) html+="A";
-        else if(obj[document.getElementById('input').value][str] > 80) html+="B";
-        else if(obj[document.getElementById('input').value][str] > 70) html+="C";
-        else if(obj[document.getElementById('input').value][str] > 60) html+="D";
+        else if(obj[document.getElementById('input').value.toLowerCase()][str] > 80) html+="B";
+        else if(obj[document.getElementById('input').value.toLowerCase()][str] > 70) html+="C";
+        else if(obj[document.getElementById('input').value.toLowerCase()][str] > 60) html+="D";
         else html+="F";
         html+="</td></tr>";
     }
@@ -92,9 +92,9 @@ $(document).ready(function() {
       var line = allTextLines[i].split(",");
       var cities = line[0].split("-");
       for(var j=0;j<cities.length;j++){
-          obj[cities[j].replace(/["]+/g, '')]={};
+          obj[(cities[j].replace(/["]+/g, '')).toLowerCase()]={};
           for(var k=2; k<line.length;k++){
-              (obj[cities[j].replace(/["]+/g, '')])[titles[k-1]]=line[k];
+              (obj[(cities[j].replace(/["]+/g, '')).toLowerCase()])[titles[k-1]]=line[k];
           }
       }
     }
