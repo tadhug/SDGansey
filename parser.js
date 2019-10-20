@@ -60,15 +60,23 @@ function update(){
       if(i==14)continue;
         var str = "score_sdg"+i;
         //html +="<p>"+goals[str]+": "+obj[document.getElementById('input').value][str]+"</p>";
-        html+='<div class="col-md-3"><div class="agent"><div class="img"><img src="images/Goals'+str+'.png" class="img-fluid" alt="Colorlib Template"></div><div class="desc"><h3><a href="properties.html">James Stallon</a></h3><p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p></div></div></div>'
+        if(i%4 == 0) {
+          html+='<section class="ftco-section ftco-agent"><div class="container"><div class="row">'
+        }
+        html+='<div class="col-md-3"><div class="agent"><div class="img"><img src="images/Goals'+str+'.png" class="img-fluid" alt="Colorlib Template"></div>'
+        html+='<div class="desc"><h3><a href="properties.html">James Stallon</a></h3><p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p></div></div></div>'
         html+="<tr><td>"+goals[str]+"</td><td>"+obj[document.getElementById('input').value.toLowerCase()][str]+"</td><td>";
         if(obj[document.getElementById('input').value.toLowerCase()][str] > 90) html+="A";
         else if(obj[document.getElementById('input').value.toLowerCase()][str] > 80) html+="B";
         else if(obj[document.getElementById('input').value.toLowerCase()][str] > 70) html+="C";
         else if(obj[document.getElementById('input').value.toLowerCase()][str] > 60) html+="D";
         else html+="F";
+        if (i%4 == 0) {
+          html+='</div></div></section>'
+        }
         html+="</td></tr>";
     }
+
     document.getElementById('display').innerHTML=html;
    //document.getElementById('display').innerHTML="<p>"+obj[document.getElementById('input').value]['score_sdgi']+"</p>";
 }
