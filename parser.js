@@ -20,28 +20,28 @@ var obj = {};
 function update(){
     document.getElementsByClassName("owl-carousel")[0].style.display="none";
     var html = "<h1>Overall Score</h1><h2>"+obj[document.getElementById('input').value.toLowerCase()]['score_sdgi']+"<div ";
-    if(obj[document.getElementById('input').value]['score_sdgi'] > 90){
+    if(obj[document.getElementById('input').value.toLowerCase()]['score_sdgi'] > 90){
         html+='id="Green"><h2>';
         html+=" A";
         html+="</h2>";
         html +='</div>'
       // document.body.style.background = 'green';
     } 
-    else if(obj[document.getElementById('input').value]['score_sdgi'] >= 80){
+    else if(obj[document.getElementById('input').value.toLowerCase()]['score_sdgi'] >= 80){
         html+='id="Yellow"><h2>';
         html+=" B";
         html+="</h2>";
         html +='</div>'
       // document.body.style.background = 'yellow';
     } 
-    else if(obj[document.getElementById('input').value]['score_sdgi'] >= 70){
+    else if(obj[document.getElementById('input').value.toLowerCase()]['score_sdgi'] >= 70){
         html+='id="orange"><h2>';
         html+=" C";
         html+="</h2>";
         html +='</div>'
       // document.body.style.background = 'orange';
     } 
-    else if(obj[document.getElementById('input').value]['score_sdgi'] >= 60){
+    else if(obj[document.getElementById('input').value.toLowerCase()]['score_sdgi'] >= 60){
       html+='id="red"><h2>';
       html+=" D";
       html+="</h2>";
