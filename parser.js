@@ -24,38 +24,37 @@ function update(){
         html+='id="Green"><h2>';
         html+=" A";
         html+="</h2>";
-        hrml +='</div>'
+        html +='</div>'
       // document.body.style.background = 'green';
     } 
     else if(obj[document.getElementById('input').value]['score_sdgi'] >= 80){
         html+='id="Yellow"><h2>';
         html+=" B";
         html+="</h2>";
-        hrml +='</div>'
+        html +='</div>'
       // document.body.style.background = 'yellow';
     } 
     else if(obj[document.getElementById('input').value]['score_sdgi'] >= 70){
         html+='id="orange"><h2>';
         html+=" C";
         html+="</h2>";
-        hrml +='</div>'
+        html +='</div>'
       // document.body.style.background = 'orange';
     } 
     else if(obj[document.getElementById('input').value]['score_sdgi'] >= 60){
       html+='id="red"><h2>';
       html+=" D";
       html+="</h2>";
-      hrml +='</div>'
+      html +='</div>'
       // document.body.style.background = 'red';
     } else{
         html+='id="black"><h2>';
         html+=" F";
         html+="</h2>";
-        hrml +='</div>'
+        html +='</div>'
       // document.body.style.background='black';
       // document.body.style.color='white';
     }
-        html+="</h2>";
     html+="<table><tr><th>Category</th><th>Percentage</th><th>Grade</th></tr>"
     for(var i=1; i<=16; i++){
       if(i==14)continue;
