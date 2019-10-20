@@ -9961,6 +9961,7 @@ textarea.form-control {
   -moz-border-radius: 25px;
   border-radius: 25px;
   background-color: green;
+  text-align: center;
 }
 
 #red {
@@ -9970,6 +9971,7 @@ textarea.form-control {
   -moz-border-radius: 25px;
   border-radius: 25px;
   background-color: red;
+  text-align: center;
 }
 
 #yellow {
@@ -9979,6 +9981,7 @@ textarea.form-control {
   -moz-border-radius: 25px;
   border-radius: 25px;
   background-color: yellow;
+  text-align: center;
 }
 
 #orange {
@@ -9988,6 +9991,7 @@ textarea.form-control {
   -moz-border-radius: 25px;
   border-radius: 25px;
   background-color: orange;
+  text-align: center;
 }
 
 #black {
@@ -9997,6 +10001,7 @@ textarea.form-control {
   -moz-border-radius: 25px;
   border-radius: 25px;
   background-color: black;
+  text-align: center;
 }
 
 @-webkit-keyframes loader-rotate {
