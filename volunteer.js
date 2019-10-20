@@ -18,5 +18,6 @@ function getVolunteer(clicked){
         score_sdg16: " legal justice"
       };
     var search = document.getElementById('input').value+" volunteering"+extraSearch[sdg];
-    window.open('https://www.google.com/search?='+encodeURIComponent(search));
+    console.log(search+"::::"+encodeURIComponent(search));
+    window.open('http://www.google.com/search?q='+encodeURIComponent(search));
 }
