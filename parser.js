@@ -20,26 +20,36 @@ var obj = {};
 function update(){
     document.getElementsByClassName("owl-carousel")[0].style.display="none";
     var html = "<h1>Overall Score</h1><h2>"+obj[document.getElementById('input').value]['score_sdgi'];
-        if(obj[document.getElementById('input').value][str] > 90){
-          html+=" A";
-          document.body.style.background = 'green';
-        } 
-        else if(obj[document.getElementById('input').value]['score_sdgi'] >= 80){
-          html+=" B";
-          document.body.style.background = 'yellow';
-        } 
-        else if(obj[document.getElementById('input').value]['score_sdgi'] >= 70){
-          html+=" C";
-          document.body.style.background = 'orange';
-        } 
-        else if(obj[document.getElementById('input').value]['score_sdgi'] >= 60){
-          html+=" D";
-          document.body.style.background = 'red';
-        } else{
-          html+=" F";
-          document.body.style.background='black';
-          document.body.style.color='white';
-        }
+    if(obj[document.getElementById('input').value][str] > 90){
+      html+=" A";
+      html+="</h2>";
+      html+='<div id="green"></div>'
+      // document.body.style.background = 'green';
+    } 
+    else if(obj[document.getElementById('input').value]['score_sdgi'] >= 80){
+      html+=" B";
+      html+="</h2>";
+      html+='<div id="yellow"></div>'
+      // document.body.style.background = 'yellow';
+    } 
+    else if(obj[document.getElementById('input').value]['score_sdgi'] >= 70){
+      html+=" C";
+      html+="</h2>";
+      html+='<div id="orange"></div>'
+      // document.body.style.background = 'orange';
+    } 
+    else if(obj[document.getElementById('input').value]['score_sdgi'] >= 60){
+      html+=" D";
+      html+="</h2>";
+      html+='<div id="red"></div>'
+      // document.body.style.background = 'red';
+    } else{
+      html+=" F";
+      html+="</h2>";
+      html+='<div id="black"></div>'
+      // document.body.style.background='black';
+      // document.body.style.color='white';
+    }
         html+="</h2>";
     html+="<table><tr><th>Category</th><th>Percentage</th><th>Grade</th></tr>"
     for(var i=1; i<=16; i++){
