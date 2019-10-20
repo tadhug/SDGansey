@@ -61,7 +61,7 @@ function update(){
         var str = "score_sdg"+i;
         //html +="<p>"+goals[str]+": "+obj[document.getElementById('input').value][str]+"</p>";
         html+="<tr><td>"+goals[str]+"</td><td>"+obj[document.getElementById('input').value.toLowerCase()][str]+"</td><td>";
-        if(obj[document.getElementById('input').value][str] > 90) html+="A";
+        if(obj[document.getElementById('input').value.toLowerCase()][str] > 90) html+="A";
         else if(obj[document.getElementById('input').value.toLowerCase()][str] > 80) html+="B";
         else if(obj[document.getElementById('input').value.toLowerCase()][str] > 70) html+="C";
         else if(obj[document.getElementById('input').value.toLowerCase()][str] > 60) html+="D";
