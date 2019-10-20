@@ -64,7 +64,6 @@ function update() {
       //html+='<section class="ftco-section ftco-agent"><div class="container"><div class="row">'
       html += '<div class="container"><div class="row">'
     }
-    html+="<table><tr><th>Category</th><th>Percentage</th><th>Grade</th></tr>"
     for(var i=1; i<=16; i++){
       if(i==14)continue;
         var str = "score_sdg"+i;
