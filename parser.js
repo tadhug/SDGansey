@@ -1,20 +1,20 @@
 var obj = {};
         var goals={
-          score_sdg1: "<img class='sml' sdg='score_sdg1' src='/images/Goal01.png'>",
-          score_sdg2: "<img class='sml' sdg='score_sdg2' src='/images/Goal02.png'>",
-          score_sdg3: "<img class='sml' sdg='score_sdg3' src='/images/Goal03.png'>",
-          score_sdg4: "<img class='sml' sdg='score_sdg4' src='/images/Goal04.png'>",
-          score_sdg5: "<img class='sml' sdg='score_sdg5' src='/images/Goal05.png'>",
-          score_sdg6: "<img class='sml' sdg='score_sdg6' src='/images/Goal06.png'>",
-          score_sdg7: "<img class='sml' sdg='score_sdg7' src='/images/Goal07.png'>",
-          score_sdg8: "<img class='sml' sdg='score_sdg8' src='/images/Goal08.png'>",
-          score_sdg9: "<img class='sml' sdg='score_sdg9' src='/images/Goal09.png'>",
-          score_sdg10: "<img class='sml' sdg='score_sdg10' src='/images/Goal10.png'>",
-          score_sdg11: "<img class='sml' sdg='score_sdg11' src='/images/Goal11.png'>",
-          score_sdg12: "<img class='sml' sdg='score_sdg12' src='/static/images/Goal12.png'>",
-          score_sdg13: "<img class='sml' sdg='score_sdg13' src='/static/images/Goal13.png'>",
-          score_sdg15: "<img class='sml' sdg='score_sdg15' src='/static/images/Goal15.png'>",
-          score_sdg16: "<img class='sml' sdg='score_sdg16' src='/static/images/Goal16.png'>"
+          score_sdg1: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg1' src='/images/Goal01.png'>",
+          score_sdg2: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg2' src='/images/Goal02.png'>",
+          score_sdg3: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg3' src='/images/Goal03.png'>",
+          score_sdg4: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg4' src='/images/Goal04.png'>",
+          score_sdg5: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg5' src='/images/Goal05.png'>",
+          score_sdg6: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg6' src='/images/Goal06.png'>",
+          score_sdg7: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg7' src='/images/Goal07.png'>",
+          score_sdg8: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg8' src='/images/Goal08.png'>",
+          score_sdg9: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg9' src='/images/Goal09.png'>",
+          score_sdg10: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg10' src='/images/Goal10.png'>",
+          score_sdg11: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg11' src='/images/Goal11.png'>",
+          score_sdg12: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg12' src='/static/images/Goal12.png'>",
+          score_sdg13: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg13' src='/static/images/Goal13.png'>",
+          score_sdg15: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg15' src='/static/images/Goal15.png'>",
+          score_sdg16: "<img onclick='getVolunteer(this);' class='sml' sdg='score_sdg16' src='/static/images/Goal16.png'>"
         };
 
 function update(){
